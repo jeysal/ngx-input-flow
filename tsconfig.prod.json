@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "es2015",
+    "outDir": "dist"
+  },
+  "include": [],
+  "files": ["src/index.ts"],
+  "angularCompilerOptions": {
+    "genDir": "aot"
+  }
+}

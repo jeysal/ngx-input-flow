@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "removeComments": false,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "tmp"
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "aot",
+    "dist",
+    "node_modules",
+    "tmp"
+  ],
+  "angularCompilerOptions": {
+    "skipMetadataEmit": false,
+    "skipTemplateCodegen": true
+  }
+}

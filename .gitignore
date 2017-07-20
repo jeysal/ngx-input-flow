@@ -1,0 +1,14 @@
+# editor
+.idea/
+.vscode/
+
+# build
+node_modules/
+coverage/
+dist/
+aot/
+tmp/
+
+# error
+*yarn-error.log*
+npm-debug.log*
