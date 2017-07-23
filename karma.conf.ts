@@ -20,8 +20,14 @@ const options: ConfigOptions = {
 const tsConfig = {
   reports: {
     html: { directory: 'coverage/karma' },
-    lcovonly: { directory: 'coverage/karma' },
-    json: { directory: 'coverage/karma' },
+    lcovonly: {
+      directory: 'coverage/karma',
+      filename: 'lcov.info',
+    },
+    json: {
+      directory: 'coverage/karma',
+      filename: 'coverage.json',
+    },
     text: '',
   },
   tsconfig: './tsconfig.json',
