@@ -37,7 +37,7 @@
     "compile.bundle": "rollup -c",
     "build": "run-p lint test compile",
     "postbuild": "cp package.json LICENSE README.* dist",
-    "e2e.update": "webdriver-manager update",
+    "e2e.update": "webdriver-manager update --gecko false",
     "pree2e": "tsc",
     "e2e": "run-p -r e2e.wds e2e.driverstart e2e.protractor",
     "e2e.wds": "webpack-dev-server --config webpack.config.e2e.ts --bail --history-api-fallback",
