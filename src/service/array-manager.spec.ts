@@ -16,6 +16,17 @@ describe('ArrayManager', () => {
     config = { isEmpty, createEmptyItem };
   });
 
+  describe('#resetFlowItem()', () => {
+    it('retrieves a new flow item from the config', () => {
+      createEmptyItem.onFirstCall().returns({ val: 1 });
+      createEmptyItem.onSecondCall().returns({ val: 2 });
+
+      manager = new ArrayManager(config);
+      manager.resetFlowItem();
+      manager.getFlow().should.eql([{ val: 2 }]);
+    });
+  });
+
   describe('#getFlow()', () => {
     beforeEach(() => {
       createEmptyItem.onFirstCall().returns({});

@@ -89,6 +89,12 @@ describe('The InputFlowDirective', () => {
       inputFlow.emptyItem = emptyItem;
       config.createEmptyItem.should.equal(emptyItem);
     });
+
+    it('updates the flow', () => {
+      const emptyItem = () => ({ val: 42 });
+      inputFlow.emptyItem = emptyItem;
+      inputFlow.flow().should.eql([{ val: 42 }]);
+    });
   });
 
   describe('[emptyWhen] input', () => {
