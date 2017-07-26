@@ -16,6 +16,10 @@ export class ArrayManager<T> {
    */
   private currentFlowItem: any = this.config.createEmptyItem();
 
+  public resetFlowItem(): void {
+    this.currentFlowItem = this.config.createEmptyItem();
+  }
+
   /**
    * Creates the full array with the flow item appended.
    */
@@ -62,7 +66,7 @@ export class ArrayManager<T> {
     // push new flow item if necessary
     if (!this.config.isEmpty(this.currentFlowItem)) {
       this.current.push(this.currentFlowItem);
-      this.currentFlowItem = this.config.createEmptyItem();
+      this.resetFlowItem();
       return true;
     }
     return false;

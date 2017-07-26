@@ -81,6 +81,7 @@ export class InputFlowDirective<T> implements DoCheck {
   @Input()
   public set emptyItem(val: () => any) {
     this.config.createEmptyItem = val;
+    this.manager.resetFlowItem();
   }
 
   /**
