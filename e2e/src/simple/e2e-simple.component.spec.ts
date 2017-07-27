@@ -115,7 +115,7 @@ async function displayedPersons() {
     input.getAttribute('value'),
   );
   const invites = await $$('input[name="invited"]').map((input: any) =>
-    input.getAttribute('checked'),
+    input.isSelected(),
   );
   return names.map((name, i) => ({ name, invited: !!invites[i] }));
 }
