@@ -15,9 +15,9 @@ describe('The directives used for a form with text inputs', () => {
   });
 
   it('should allow entering multiple items in a row', async () => {
-    await $('input').sendKeys(
-      ...Array(8).fill(null).map((_, i) => (i % 2 ? Key.TAB : i / 2)),
-    );
+    Array(4)
+      .fill(0)
+      .map(async (_, i) => await $('input:last-child').sendKeys(i, Key.TAB));
 
     JSON.parse(await $('#customers').getText()).should.eql(
       Array(4).fill(0).map((_, i) => ({ id: '' + i })),
@@ -25,9 +25,9 @@ describe('The directives used for a form with text inputs', () => {
   });
 
   it('should allow removing intermediate items', async () => {
-    await $('input').sendKeys(
-      ...Array(8).fill(null).map((_, i) => (i % 2 ? Key.TAB : i / 2)),
-    );
+    Array(4)
+      .fill(0)
+      .map(async (_, i) => await $('input:last-child').sendKeys(i, Key.TAB));
     await $('input:nth-child(3)').sendKeys(
       Key.CONTROL,
       'a',
