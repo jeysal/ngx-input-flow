@@ -4,11 +4,14 @@ node_js:
 
 cache: yarn
 
+addons:
+  browserstack:
+    username: "timseckinger1"
+    access_key:
+      secure: "PYqYbhDB97l0NhzaZ3QyBsWM2OB43gHUlMJ7ZwMxwSRDJfWMPtB7aXQnRf3UYmPk5AhDtZ6vYoqYiQitJLCgnL4wfdBk22/OpyT5JcZzpaKZG5nSTAgAgJXi9rNefR13mjdtEAa0bgVgynhcScCKfFP9k4mNLokZQzBNUY59CmnhHj1+L7oJp8b47gdcQeskyu8CgbSFU9U3/BbH1PuyodYkm7pvO1nWXqkWhgA/bKxc36RT9w12ftbWslEIA6EfntkyeNhYQhPJAcEWiK32l/nnPhwJ55v5Ggpf6SX1IUPjs4Hn/RW1CVPag8HE1Ed7iiGVVb8L7TjnGK7kqo85bxi/jdOD6Rf8/impZmbx+WE0pm2IKZUF4HIfJJ14zuA1L2CQl0EV9ZmZLtMmd1ChCWetNMX6U93mJ3vLYzOAfd7eGkNFUoqv6yeOO8z7rEv5kMzE4wtgdUjcnn5Dg3MhjZwdK+wKAkKJC9kKCmjOX3LQE1n91QQp6gsz7xPPih69TKYuCF0Rbaw7pgXhSHrs9Di9ohEsjfbMmj7js5LxhdjIWQTC07rbTlWIMzdZjfY690m9sGUxZ+idJulzAThDW4ELmPmoF9VOGkhpvBcp10Y9qgdiE3wrTqHKhxYg422QUUMP3sRB2ZSYLFueWWm9qn7PCNeAMUEq0UBVS4BCQlg="
+
 script:
-  - yarn run lint
-  - yarn run test
-  - yarn run e2e.update
-  - yarn run e2e
+  - yarn run e2e.edge
 
 before_install: yarn global add greenkeeper-lockfile@1
 before_script: greenkeeper-lockfile-update

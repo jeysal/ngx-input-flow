@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "ngx-input-flow",
   "version": "0.1.0",
   "description": "Fast & smooth list input for Angular",
@@ -39,10 +38,17 @@
     "postbuild": "cp package.json LICENSE README.* dist",
     "e2e.update": "webdriver-manager update --gecko false",
     "pree2e": "tsc",
-    "e2e": "run-p -r e2e.wds e2e.driverstart e2e.protractor",
+    "e2e": "run-p -r e2e.wds e2e.driverstart e2e.test",
     "e2e.wds": "webpack-dev-server --config webpack.config.e2e.ts --bail --history-api-fallback",
     "e2e.driverstart": "webdriver-manager start",
-    "e2e.protractor": "wait-on http://localhost:4444/ && wait-on http://localhost:8080/ && protractor tmp/protractor.conf.js"
+    "e2e.test": "run-s e2e.wait e2e.protractor",
+    "e2e.wait": "wait-on http://localhost:4444/ && wait-on http://localhost:8080/",
+    "e2e.protractor": "protractor tmp/protractor.conf.js",
+    "pree2e.edge": "tsc",
+    "e2e.edge": "run-p -r e2e.wds e2e.edge.test",
+    "e2e.edge.test": "run-s e2e.edge.wait e2e.edge.protractor",
+    "e2e.edge.wait": "wait-on http://localhost:8080/",
+    "e2e.edge.protractor": "protractor tmp/protractor-edge.conf.js"
   },
   "peerDependencies": {
     "@angular/core": "^4.0.0"
