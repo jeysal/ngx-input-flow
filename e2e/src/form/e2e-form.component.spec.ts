@@ -5,7 +5,7 @@ import { $, $$, browser, Key } from 'protractor';
 chai.should();
 
 describe('The directives used for a form with text inputs', () => {
-  beforeEach(async () => browser.get('/form'));
+  beforeEach(async () => await browser.get('/form'));
   it('should render one initial empty input', async () => {
     const inputValues = await $$('input').map((input: any) =>
       input.getAttribute('value'),
