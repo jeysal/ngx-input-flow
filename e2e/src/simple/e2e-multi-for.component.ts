@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { persons } from './persons';
+import { persons } from '../data/persons';
 
 @Component({
   selector: 'ngx-input-flow-e2e-multi-for',

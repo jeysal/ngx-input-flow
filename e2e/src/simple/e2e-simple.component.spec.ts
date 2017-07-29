@@ -1,7 +1,8 @@
 import * as chai from 'chai';
 import 'mocha';
-import { $, $$, browser, Key } from 'protractor';
-import { emptyPerson, persons } from './persons';
+import { $, browser, Key } from 'protractor';
+import { displayedPersons } from '../data/displayed-persons';
+import { emptyPerson, persons } from '../data/persons';
 
 chai.should();
 
@@ -108,14 +109,4 @@ function testComponent(route: string, repeaterType: string) {
       ]);
     });
   });
-}
-
-async function displayedPersons() {
-  const names = await $$('input[name="name"]').map((input: any) =>
-    input.getAttribute('value'),
-  );
-  const invites = await $$('input[name="invited"]').map((input: any) =>
-    input.isSelected(),
-  );
-  return names.map((name, i) => ({ name, invited: !!invites[i] }));
 }
