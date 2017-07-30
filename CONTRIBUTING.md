@@ -13,6 +13,7 @@ Execute `yarn` to install the required dependencies.
 
 `yarn run e2e.update` - Prepare for end-to-end tests  
 `yarn run e2e` - Run the end-to-end tests  
+`yarn run e2e.wds` - Serve the end-to-end application on port 8080 for manual testing
 
 `yarn run build` - Build the project from source and assemble the build output in the `dist` folder  
 
