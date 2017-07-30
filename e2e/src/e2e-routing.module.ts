@@ -5,6 +5,7 @@ import { E2eCheckNewElementsComponent } from './check-elements/e2e-check-new-ele
 import { E2eCheckNoElementsComponent } from './check-elements/e2e-check-no-elements.component';
 import { E2eCustomEmptyComponent } from './custom-empty/e2e-custom-empty.component';
 import { E2eFormComponent } from './form/e2e-form.component';
+import { E2eReplacementComponent } from './replacement/e2e-replacement.component';
 import { E2eMultiForComponent } from './simple/e2e-multi-for.component';
 import { E2eMultiModelComponent } from './simple/e2e-multi-model.component';
 import { E2eSimpleComponent } from './simple/e2e-simple.component';
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'check-all-elements',
     component: E2eCheckAllElementsComponent,
+  },
+  {
+    path: 'replacement',
+    component: E2eReplacementComponent,
   },
 ];
 
