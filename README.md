@@ -2,8 +2,8 @@
 
 > Fast & smooth list input for Angular
 
-[![build status](https://img.shields.io/travis/jeysal/ngx-input-flow.svg?style=flat-square)](https://travis-ci.org/jeysal/ngx-input-flow)
-[![code coverage](https://img.shields.io/codecov/c/github/jeysal/ngx-input-flow.svg?style=flat-square)](https://codecov.io/gh/jeysal/ngx-input-flow)
+[![build status](https://img.shields.io/travis/jeysal/ngx-input-flow/master.svg?style=flat-square)](https://travis-ci.org/jeysal/ngx-input-flow)
+[![code coverage](https://img.shields.io/codecov/c/github/jeysal/ngx-input-flow/master.svg?style=flat-square)](https://codecov.io/gh/jeysal/ngx-input-flow)
 
 [![npm package](https://img.shields.io/npm/v/ngx-input-flow.svg?style=flat-square)](https://www.npmjs.com/package/ngx-input-flow)
 [![license](https://img.shields.io/github/license/jeysal/ngx-input-flow.svg?style=flat-square)](https://github.com/jeysal/ngx-input-flow/blob/master/LICENSE)
