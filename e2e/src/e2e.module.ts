@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { InputFlowModule } from '../../src/module';
+import { E2eCheckAllElementsComponent } from './check-elements/e2e-check-all-elements.component';
+import { E2eCheckNewElementsComponent } from './check-elements/e2e-check-new-elements.component';
+import { E2eCheckNoElementsComponent } from './check-elements/e2e-check-no-elements.component';
 import { E2eCustomEmptyComponent } from './custom-empty/e2e-custom-empty.component';
 import { E2eRootComponent } from './e2e-root.component';
 import { E2eRoutingModule } from './e2e-routing.module';
@@ -27,6 +30,9 @@ import { E2eSimpleComponent } from './simple/e2e-simple.component';
     E2eMultiModelComponent,
     E2eSimpleComponent,
     E2eCustomEmptyComponent,
+    E2eCheckAllElementsComponent,
+    E2eCheckNewElementsComponent,
+    E2eCheckNoElementsComponent,
   ],
   providers: [],
   bootstrap: [E2eRootComponent],

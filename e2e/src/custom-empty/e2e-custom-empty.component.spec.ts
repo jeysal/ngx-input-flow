@@ -1,6 +1,6 @@
 import * as chai from 'chai';
 import 'mocha';
-import { $$, browser, Key } from 'protractor';
+import { $, $$, browser, Key } from 'protractor';
 
 chai.should();
 
@@ -24,6 +24,12 @@ describe('The custom emptiness config', () => {
       Key.NULL,
       Key.DELETE,
     );
+
+    (await displayedItems()).should.eql([{ product: '', count: '1' }]);
+  });
+
+  it('is used to determine whether a programatically modified item is empty', async () => {
+    await $('#empty-first').click();
 
     (await displayedItems()).should.eql([{ product: '', count: '1' }]);
   });
