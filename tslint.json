@@ -155,7 +155,8 @@
     "only-arrow-functions": false,
     // there are many valid reasons to declare a function
     "ordered-imports": true,
-    "prefer-array-literal": false,
+    "array-type": [true, "array"],
+    "prefer-array-literal": true,
     "prefer-const": true,
     "typedef": [
       true,
