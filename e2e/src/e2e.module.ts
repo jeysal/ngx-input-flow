@@ -11,6 +11,7 @@ import { E2eCustomEmptyComponent } from './custom-empty/e2e-custom-empty.compone
 import { E2eRootComponent } from './e2e-root.component';
 import { E2eRoutingModule } from './e2e-routing.module';
 import { E2eFormComponent } from './form/e2e-form.component';
+import { E2eOtherInputsComponent } from './other-inputs/e2e-other-inputs.component';
 import { E2eReplacementComponent } from './replacement/e2e-replacement.component';
 import { E2eMultiForComponent } from './simple/e2e-multi-for.component';
 import { E2eMultiModelComponent } from './simple/e2e-multi-model.component';
@@ -35,6 +36,7 @@ import { E2eSimpleComponent } from './simple/e2e-simple.component';
     E2eCheckNewElementsComponent,
     E2eCheckNoElementsComponent,
     E2eReplacementComponent,
+    E2eOtherInputsComponent,
   ],
   providers: [],
   bootstrap: [E2eRootComponent],
