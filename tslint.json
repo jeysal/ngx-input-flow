@@ -119,7 +119,7 @@
     "comment-format": true,
     "function-name": false,
     "import-name": true,
-    "interface-name": true,
+    "interface-name": false,
     "jsdoc-format": true,
     "max-file-line-count": true,
     "max-func-body-length": [true, 100, {"ignore-parameters-to-function-regex": "describe"}],
