@@ -6,5 +6,7 @@ export default {
   sourceMap: true,
   globals: {
     '@angular/core': 'ng.core',
+    'rxjs/Observable': 'Rx',
+    'rxjs/Subject': 'Rx',
   },
 };

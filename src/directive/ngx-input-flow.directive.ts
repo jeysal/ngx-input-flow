@@ -9,8 +9,8 @@ import {
 } from '@angular/core';
 import { EmptinessConfiguration } from '../config/emptiness-configuration';
 import { ElementCheckSetting } from '../model/element-check-setting';
-import { FocusTracker } from '../model/focus-tracker';
 import { ArrayManager } from '../service/array-manager';
+import { FocusTracker } from '../service/focus-tracker';
 
 @Directive({
   selector: '[ngxInputFlow]',

@@ -41,17 +41,16 @@ export class ArrayManager<T> {
     return emptyRemoval;
   }
 
-  public checkItem(item: T): boolean {
+  public checkItems(items: T[]): boolean {
     let emptyRemoval = false;
 
-    if (this.config.isEmpty(item)) {
-      // iterate backwards
-      let i = this.current.length;
-      while (i--) {
-        if (this.current[i] === item) {
-          this.current.splice(i, 1);
-          emptyRemoval = true;
-        }
+    // iterate backwards
+    let i = this.current.length;
+    while (i--) {
+      const item = this.current[i];
+      if (items.includes(item) && this.config.isEmpty(item)) {
+        this.current.splice(i, 1);
+        emptyRemoval = true;
       }
     }
 

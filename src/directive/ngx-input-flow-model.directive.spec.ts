@@ -3,59 +3,56 @@ import 'mocha';
 import * as sinon from 'sinon';
 import * as sinonChai from 'sinon-chai';
 import { EmptinessConfiguration } from '../config/emptiness-configuration';
-import { FocusTracker } from '../model/focus-tracker';
 import { ArrayManager } from '../service/array-manager';
+import { FocusEvent, FocusTracker } from '../service/focus-tracker';
 import { InputFlowModelDirective } from './ngx-input-flow-model.directive';
 
 chai.use(sinonChai);
 
 describe('InputFlowModelDirective', () => {
   let tracker: FocusTracker<object>;
+  let focusins: FocusEvent<object>[];
+  let focusouts: FocusEvent<object>[];
+
   let manager: ArrayManager<object>;
   let inputFlowModel: InputFlowModelDirective<object>;
 
   beforeEach(() => {
-    tracker = new FocusTracker();
+    tracker = new FocusTracker(manager);
+    focusins = [];
+    focusouts = [];
+    tracker.focusin$.subscribe(e => focusins.push(e));
+    tracker.focusout$.subscribe(e => focusouts.push(e));
     manager = new ArrayManager(new EmptinessConfiguration());
     inputFlowModel = new InputFlowModelDirective(tracker, manager);
+    inputFlowModel.focusDebounce = 42;
 
     inputFlowModel.ngxInputFlowModel = {};
   });
 
   describe('#onFocusout()', () => {
-    it('should store the item that has lost focus', () => {
+    it('should next() the item that has lost focus to the tracker', () => {
       inputFlowModel.onFocusout();
 
-      (tracker.lastFocused as object).should.equal(
-        inputFlowModel.ngxInputFlowModel,
-      );
+      focusouts.should.eql([
+        {
+          element: inputFlowModel.ngxInputFlowModel,
+          debounce: 42,
+        },
+      ]);
     });
   });
 
   describe('#onFocusin()', () => {
-    let checkItem: sinon.SinonSpy;
-
-    beforeEach(() => {
-      checkItem = sinon.spy(manager, 'checkItem');
-    });
-
-    it('does not check anything on the first focusin', () => {
+    it('should next() the item that has lost focus to the tracker', () => {
       inputFlowModel.onFocusin();
-      checkItem.should.not.have.been.called;
-    });
 
-    it('checks the previously focused item on focusin', () => {
-      tracker.lastFocused = { val: 1 };
-      inputFlowModel.ngxInputFlowModel = { val: 2 };
-
-      inputFlowModel.onFocusin();
-      checkItem.should.have.been.calledWith(tracker.lastFocused);
-    });
-
-    it('does not recheck the item itself on focusin', () => {
-      tracker.lastFocused = inputFlowModel.ngxInputFlowModel;
-      inputFlowModel.onFocusin();
-      checkItem.should.not.have.been.called;
+      focusins.should.eql([
+        {
+          element: inputFlowModel.ngxInputFlowModel,
+          debounce: 42,
+        },
+      ]);
     });
   });
 

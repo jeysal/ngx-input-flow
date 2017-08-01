@@ -1,6 +1,6 @@
 import { Directive, HostListener, Input } from '@angular/core';
-import { FocusTracker } from '../model/focus-tracker';
 import { ArrayManager } from '../service/array-manager';
+import { FocusTracker } from '../service/focus-tracker';
 
 @Directive({
   selector: '[ngxInputFlowModel]',
@@ -8,10 +8,27 @@ import { ArrayManager } from '../service/array-manager';
 export class InputFlowModelDirective<T> {
   @Input('ngxInputFlowModel') public ngxInputFlowModel: T;
 
+  /**
+   * Specifies the delay after the last focus event before the array is checked for elements left empty.
+   */
+  @Input('focusDebounce') public focusDebounce: number = 500;
+
   constructor(
     private tracker: FocusTracker<T>,
     private manager: ArrayManager<T>,
   ) {}
+
+  /**
+   * Checks the item that has lost focus previously (stored by {@link onFocusout}) for emptiness.
+   * The empty check is skipped if the very same item just regained focus.
+   */
+  @HostListener('focusin')
+  public onFocusin() {
+    this.tracker.focusin$.next({
+      element: this.ngxInputFlowModel,
+      debounce: this.focusDebounce,
+    });
+  }
 
   /**
    * Just stores the item that has lost focus without empty check.
@@ -21,19 +38,10 @@ export class InputFlowModelDirective<T> {
    */
   @HostListener('focusout')
   public onFocusout() {
-    this.tracker.lastFocused = this.ngxInputFlowModel;
-  }
-
-  /**
-   * Checks the item that has lost focus previously (stored by {@link onFocusout}) for emptiness.
-   * The empty check is skipped if the very same item just regained focus.
-   */
-  @HostListener('focusin')
-  public onFocusin() {
-    const lastFocused = this.tracker.lastFocused;
-
-    if (lastFocused && this.ngxInputFlowModel !== lastFocused)
-      this.manager.checkItem(lastFocused);
+    this.tracker.focusout$.next({
+      element: this.ngxInputFlowModel,
+      debounce: this.focusDebounce,
+    });
   }
 
   /**
