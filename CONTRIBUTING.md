@@ -17,6 +17,8 @@ Execute `yarn` to install the required dependencies.
 
 `yarn run build` - Build the project from source and assemble the build output in the `dist` folder  
 
+`yarn run clean` - In case anything breaks due to leftover files  
+
 ## Commits
 
 We follow the [Angular commit message convention](https://github.com/angular/angular/blob/master/CONTRIBUTING.md).
