@@ -92,7 +92,7 @@ describe('ArrayManager', () => {
     });
   });
 
-  describe('#checkItem()', () => {
+  describe('#checkItems()', () => {
     beforeEach(() => {
       isEmpty.withArgs('zero').returns(true);
       isEmpty.withArgs('one').returns(true);
@@ -104,31 +104,36 @@ describe('ArrayManager', () => {
     });
 
     it('removes specified item', () => {
-      manager.checkItem('zero');
+      manager.checkItems(['zero']);
       manager.current.should.eql(['one', 'two', 'three']);
     });
 
     it('removes all occurrences of specified item', () => {
       manager.current.push('zero');
-      manager.checkItem('zero');
+      manager.checkItems(['zero']);
       manager.current.should.eql(['one', 'two', 'three']);
     });
 
     it('does not remove a non-empty item', () => {
-      manager.checkItem('two');
+      manager.checkItems(['two']);
       manager.current.should.eql(['zero', 'one', 'two', 'three']);
     });
 
+    it('checks multiple items at once', () => {
+      manager.checkItems(['zero', 'one', 'two']);
+      manager.current.should.eql(['two', 'three']);
+    });
+
     it('returns true if an item has been removed', () => {
-      manager.checkItem('zero').should.be.true;
+      manager.checkItems(['zero']).should.be.true;
     });
 
     it('returns false if no items have been removed', () => {
-      manager.checkItem('three').should.be.false;
+      manager.checkItems(['three']).should.be.false;
     });
 
     it('ignores items that do not occur in the current array', () => {
-      manager.checkItem('four');
+      manager.checkItems(['four']);
       manager.current.should.eql(['zero', 'one', 'two', 'three']);
     });
   });

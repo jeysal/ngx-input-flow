@@ -51,7 +51,8 @@
     "e2e.edge.protractor": "protractor tmp/protractor-edge.conf.js"
   },
   "peerDependencies": {
-    "@angular/core": "^4.0.0"
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0"
   },
   "devDependencies": {
     "@angular/common": "^4.2.3",

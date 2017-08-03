@@ -64,7 +64,7 @@ You can find some more examples in the `e2e` folder that is used for end-to-end 
 
 ### Configuration options
 
-These options can be used as inputs to `ngxInputFlow`.
+#### ngxInputFlow options
 
 | Input           | Type                                          | Default                                         |
 | --------------- | --------------------------------------------- | ----------------------------------------------- |
@@ -89,6 +89,21 @@ The default considers elements empty if they have no truthy properties.
 **emptyItem** is a function that supplies new elements to be used as trailing empty elements for the user to modify.
 If the user edits them and they become non-empty, they will be appended to the array itself.
 The default supplies empty objects (`{}`).
+
+#### ngxInputFlowModel options
+
+| Input           | Type                                          | Default                                         |
+| --------------- | --------------------------------------------- | ----------------------------------------------- |
+|`focusDebounce`  | number                                        |`500`                                            |
+
+**focusDebounce** specifies the delay after the last focus event before the array is checked for elements that were left empty and those are removed.
+A too low value can cause trouble for mouse users if they clear one element and then click on a subsequent one,
+because the empty element could be removed and cause all subsequent inputs to change its position (e.g. slide up), including the one the user is currently clicking.  
+The directive makes sure the currently focused element is never checked.  
+When using multiple `ngxInputFlowModel` inside a `ngxInputFlow` directive, those may be assigned different `focusDebounce` values.
+If subsequent focus events are detected by `ngxInputFlowModel` instances with different `focusDebounce` values, only the last value will be used to compute the delay.
+Note that if a `focusout` is detected by a `ngxInputFlowModel` with the `focusDebounce` set to `0`, checks will be performed immediately,
+even if another instance with a higher value receives focus immediately after.
 
 ## FAQ
 
