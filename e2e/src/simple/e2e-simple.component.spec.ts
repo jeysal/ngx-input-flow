@@ -9,6 +9,7 @@ chai.should();
 testComponent('/simple', 'tr');
 testComponent('/multi-model', 'tr');
 testComponent('/multi-for', 'td');
+testComponent('/set', 'tr');
 
 function testComponent(route: string, repeaterType: string) {
   describe('The directives used for a simple table on ' + route, () => {
