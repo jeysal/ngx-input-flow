@@ -15,6 +15,7 @@ import { E2eOtherInputsComponent } from './other-inputs/e2e-other-inputs.compone
 import { E2eReplacementComponent } from './replacement/e2e-replacement.component';
 import { E2eMultiForComponent } from './simple/e2e-multi-for.component';
 import { E2eMultiModelComponent } from './simple/e2e-multi-model.component';
+import { E2eSetComponent } from './simple/e2e-set.component';
 import { E2eSimpleComponent } from './simple/e2e-simple.component';
 
 @NgModule({
@@ -31,6 +32,7 @@ import { E2eSimpleComponent } from './simple/e2e-simple.component';
     E2eMultiForComponent,
     E2eMultiModelComponent,
     E2eSimpleComponent,
+    E2eSetComponent,
     E2eCustomEmptyComponent,
     E2eCheckAllElementsComponent,
     E2eCheckNewElementsComponent,
