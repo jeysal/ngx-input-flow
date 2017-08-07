@@ -130,6 +130,7 @@ please share your ideas with an issue or pull request.
 **Q: Can I use iterables other than arrays?**  
 A: **Yes and no**, you can pass any iterable into the `ngxInputFlow` input and it should work,
 but `ngxInputFlow` will always emit an array as its output.
+Also, `*ngFor` may have problems with some types of iterables.
 
 **Q: Is there a TS/JS API that I can use to do some fancy stuff?**  
 A: The package also exports an `ArrayManager` that you can inject inside of an element with `ngxInputFlow` on it.
