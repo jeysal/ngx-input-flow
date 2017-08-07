@@ -49,10 +49,8 @@ export class InputFlowDirective<T> implements DoCheck {
    * Usually, this output is bound with a banana in a box to automatically remove empty elements from the input iterable.
    * This two-way binding modifies the input to pass it back as an output, resulting in a changed input value again.
    * However, the condensing is idempotent in that it does not emit anything on the second invocation, hence no infinite loop results.
-   *
-   * The {@link EventEmitter} is asynchronous because it emits during {@link #ngOnChanges change detection}.
    */
-  @Output() public ngxInputFlowChange = new EventEmitter<Iterable<T>>(true);
+  @Output() public ngxInputFlowChange = new EventEmitter<Iterable<T>>();
 
   /**
    * The modified input iterable, condensed to have no empty elements, then complemented with a single new empty element.
