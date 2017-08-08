@@ -135,3 +135,11 @@ Also, `*ngFor` may have problems with some types of iterables.
 **Q: Is there a TS/JS API that I can use to do some fancy stuff?**  
 A: The package also exports an `ArrayManager` that you can inject inside of an element with `ngxInputFlow` on it.
 It primarily has some methods to perform emptiness checks on parts of the array.
+
+**Q: Can I nest multiple `ngxInputFlow`s for my nested array structure?**  
+A: **Yes**, absolutely!
+Here's an example of it in action from the [corresponding end-to-end test](./e2e/src/nested) (obviously not styled at all, just like the simple example at the top).
+
+![ngx-input-flow nested demo](media/demo-nested.gif)
+
+Just make sure you do not put the outer `ngxInputFlowModel` on the same element or below the inner `ngxInputFlow`, otherwise it will attach to the inner one and your outer `ngxInputFlow` will not be notified of changes.
