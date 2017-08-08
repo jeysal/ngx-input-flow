@@ -12,7 +12,7 @@
 Create multiple elements just by tabbing through the controls.  
 Remove empty elements automatically.*
 
-![ngx-input-flow demo](demo.gif)
+![ngx-input-flow demo](media/demo.gif)
 
 ## Installation
 
