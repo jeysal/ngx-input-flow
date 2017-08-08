@@ -5,6 +5,7 @@ import { E2eCheckNewElementsComponent } from './check-elements/e2e-check-new-ele
 import { E2eCheckNoElementsComponent } from './check-elements/e2e-check-no-elements.component';
 import { E2eCustomEmptyComponent } from './custom-empty/e2e-custom-empty.component';
 import { E2eFormComponent } from './form/e2e-form.component';
+import { E2eNestedComponent } from './nested/e2e-nested.component';
 import { E2eOtherInputsComponent } from './other-inputs/e2e-other-inputs.component';
 import { E2eReplacementComponent } from './replacement/e2e-replacement.component';
 import { E2eMultiForComponent } from './simple/e2e-multi-for.component';
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'other-inputs',
     component: E2eOtherInputsComponent,
+  },
+  {
+    path: 'nested',
+    component: E2eNestedComponent,
   },
 ];
 
