@@ -88,7 +88,7 @@
     "protractor": "^5.1.2",
     "reflect-metadata": "^0.1.9",
     "rimraf": "^2.5.4",
-    "rollup": "^0.45.0",
+    "rollup": "^0.46.0",
     "rxjs": "^5.1.0",
     "sinon": "^3.0.0",
     "sinon-chai": "^2.9.0",
