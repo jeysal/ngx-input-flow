@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import 'rxjs/add/observable/merge';
-import 'rxjs/add/observable/timer';
 import 'rxjs/add/operator/debounce';
 import 'rxjs/add/operator/distinct';
 import 'rxjs/add/operator/map';
@@ -11,6 +9,8 @@ import 'rxjs/add/operator/toArray';
 import 'rxjs/add/operator/window';
 import 'rxjs/add/operator/withLatestFrom';
 import { Observable } from 'rxjs/Observable';
+import { merge } from 'rxjs/observable/merge';
+import { timer } from 'rxjs/observable/timer';
 import { Subject } from 'rxjs/Subject';
 import { ArrayManager } from '../service/array-manager';
 
@@ -30,9 +30,7 @@ export class FocusTracker<T> {
     const check$: Observable<T[]> = this.focusout$
       .map(e => e.element)
       .window(
-        Observable.merge(this.focusin$, this.focusout$).debounce(e =>
-          Observable.timer(e.debounce),
-        ),
+        merge(this.focusin$, this.focusout$).debounce(e => timer(e.debounce)),
       )
       .map(win => win.distinct().toArray())
       .mergeAll()
