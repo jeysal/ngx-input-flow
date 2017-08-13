@@ -8,5 +8,7 @@ export default {
     '@angular/core': 'ng.core',
     'rxjs/Observable': 'Rx',
     'rxjs/Subject': 'Rx',
+    'rxjs/observable/merge': 'Rx',
+    'rxjs/observable/timer': 'Rx',
   },
 };
