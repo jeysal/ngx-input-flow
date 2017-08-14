@@ -27,8 +27,8 @@ We follow the [Angular commit message convention](https://github.com/angular/ang
 
 1. Check that `yarn run all` and CI are successful
 2. Update the `CHANGELOG.md` using [standard-version](https://github.com/conventional-changelog/standard-version)
-3. `git push`
-4. `yarn build`
+3. `git push && git push --tags`
+4. `yarn run build`
 5. `cd dist`
 6. Remove the `private: true` property from the `package.json` file
 7. `npm publish`

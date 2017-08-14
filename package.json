@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "ngx-input-flow",
   "version": "1.0.0",
   "description": "Fast & smooth list input for Angular",
