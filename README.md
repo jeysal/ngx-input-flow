@@ -107,10 +107,6 @@ even if another instance with a higher value receives focus immediately after.
 
 ## FAQ
 
-**Q: Is this package stable yet?**  
-A: This is an alpha version that might not work in all cases quite yet.
-A stable 1.0.0 will be published once more testing and polishing is done.
-
 **Q: How do I use this within a form?**  
 A: A variable number of form controls is problematic, because every control needs to have a unique `name`.
 You'd probably be best off excluding the controls from the form management by declaring it standalone:
