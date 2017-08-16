@@ -10,6 +10,7 @@ import { E2eOtherInputsComponent } from './other-inputs/e2e-other-inputs.compone
 import { E2eReplacementComponent } from './replacement/e2e-replacement.component';
 import { E2eMultiForComponent } from './simple/e2e-multi-for.component';
 import { E2eMultiModelComponent } from './simple/e2e-multi-model.component';
+import { E2eOuterComponent } from './simple/e2e-outer.component';
 import { E2eSetComponent } from './simple/e2e-set.component';
 import { E2eSimpleComponent } from './simple/e2e-simple.component';
 
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'nested',
     component: E2eNestedComponent,
+  },
+  {
+    path: 'outer',
+    component: E2eOuterComponent,
   },
 ];
 
