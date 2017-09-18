@@ -1,9 +1,11 @@
 export default {
-  entry: 'dist/index.js',
-  dest: 'dist/bundles/inputflow.umd.js',
-  moduleName: 'inputflow',
-  format: 'umd',
-  sourceMap: true,
+  input: 'dist/index.js',
+  name: 'inputflow',
+  sourcemap: true,
+  output: {
+    file: 'dist/bundles/inputflow.umd.js',
+    format: 'umd',
+  },
   globals: {
     '@angular/core': 'ng.core',
     'rxjs/Observable': 'Rx',
