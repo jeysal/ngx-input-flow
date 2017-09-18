@@ -118,6 +118,13 @@ A: **No**, `ngxInputFlow` needs to be above the `*ngFor` element and `ngxInputFl
 If you move `ngxInputFlow` down to the `*ngFor` element, you cannot access `input.flow()` anymore.
 If you move `ngxInputFlowModel` above the `*ngFor`, you cannot access the current element anymore.
 
+**Q: I don't want intermediate items to disappear when the user empties them. How can I turn this off?**  
+A: From 1.1.0 onwards, you can use `ngxInputFlowModel` without binding the array element to it.
+That way, only the flow (tail of array) checks are performed and intermediate items are left as-is.  
+Also, in this use case, the answer to the previous question becomes yes,
+since you can now move `ngxInputFlowModel` above the `*ngFor`,
+as shown in the [corresponding end-to-end test](./e2e/src/no-model-binding).
+
 **Q: Why is the usage so complicated?**  
 A: This is a product of multiple iterations and the first one that does not feel like it's totally counteracting Angular's mechanics.
 If you have any ideas for a better architecture that can provide the same functionality,
