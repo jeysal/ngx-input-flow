@@ -119,6 +119,7 @@
     "comment-format": true,
     "function-name": false,
     "import-name": true,
+    "no-submodule-imports": false,
     "interface-name": false,
     "jsdoc-format": true,
     "max-file-line-count": true,
