@@ -26,11 +26,13 @@ describe('InputFlowModelDirective', () => {
     manager = new ArrayManager(new EmptinessConfiguration());
     inputFlowModel = new InputFlowModelDirective(tracker, manager);
     inputFlowModel.focusDebounce = 42;
-
-    inputFlowModel.ngxInputFlowModel = {};
   });
 
-  describe('#onFocusout()', () => {
+  describe(' with a bound model', () => {
+    beforeEach(() => {
+      inputFlowModel.ngxInputFlowModel = {};
+    });
+
     it('should next() the item that has lost focus to the tracker', () => {
       inputFlowModel.onFocusout();
 
@@ -41,9 +43,7 @@ describe('InputFlowModelDirective', () => {
         },
       ]);
     });
-  });
 
-  describe('#onFocusin()', () => {
     it('should next() the item that has lost focus to the tracker', () => {
       inputFlowModel.onFocusin();
 
@@ -53,6 +53,18 @@ describe('InputFlowModelDirective', () => {
           debounce: 42,
         },
       ]);
+    });
+  });
+
+  describe(' without a bound model', () => {
+    it('should not next() anything to the tracker on focusout', () => {
+      inputFlowModel.onFocusout();
+      focusouts.should.be.empty;
+    });
+
+    it('should not next() anything to the tracker on focusin', () => {
+      inputFlowModel.onFocusin();
+      focusins.should.be.empty;
     });
   });
 
