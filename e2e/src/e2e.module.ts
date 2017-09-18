@@ -12,6 +12,7 @@ import { E2eRootComponent } from './e2e-root.component';
 import { E2eRoutingModule } from './e2e-routing.module';
 import { E2eFormComponent } from './form/e2e-form.component';
 import { E2eNestedComponent } from './nested/e2e-nested.component';
+import { E2eNoModelBindingComponent } from './no-model-binding/e2e-no-model-binding.component';
 import { E2eOtherInputsComponent } from './other-inputs/e2e-other-inputs.component';
 import { E2eReplacementComponent } from './replacement/e2e-replacement.component';
 import { E2eInnerComponent } from './simple/e2e-inner.component';
@@ -45,6 +46,7 @@ import { E2eSimpleComponent } from './simple/e2e-simple.component';
     E2eNestedComponent,
     E2eOuterComponent,
     E2eInnerComponent,
+    E2eNoModelBindingComponent,
   ],
   providers: [],
   bootstrap: [E2eRootComponent],

@@ -24,10 +24,12 @@ export class InputFlowModelDirective<T> {
    */
   @HostListener('focusin')
   public onFocusin() {
-    this.tracker.focusin$.next({
-      element: this.ngxInputFlowModel,
-      debounce: this.focusDebounce,
-    });
+    if (this.ngxInputFlowModel != null) {
+      this.tracker.focusin$.next({
+        element: this.ngxInputFlowModel,
+        debounce: this.focusDebounce,
+      });
+    }
   }
 
   /**
@@ -38,10 +40,12 @@ export class InputFlowModelDirective<T> {
    */
   @HostListener('focusout')
   public onFocusout() {
-    this.tracker.focusout$.next({
-      element: this.ngxInputFlowModel,
-      debounce: this.focusDebounce,
-    });
+    if (this.ngxInputFlowModel != null) {
+      this.tracker.focusout$.next({
+        element: this.ngxInputFlowModel,
+        debounce: this.focusDebounce,
+      });
+    }
   }
 
   /**
