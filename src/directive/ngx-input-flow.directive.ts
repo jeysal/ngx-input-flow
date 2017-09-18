@@ -6,6 +6,7 @@ import {
   IterableDiffer,
   IterableDiffers,
   Output,
+  TrackByFunction,
 } from '@angular/core';
 import { EmptinessConfiguration } from '../config/emptiness-configuration';
 import { ElementCheckSetting } from '../model/element-check-setting';
@@ -39,8 +40,29 @@ export class InputFlowDirective<T> implements DoCheck {
 
     // ensure differ is initialized
     if (!this.differ) {
-      this.differ = this.differs.find(this.manager.current).create();
+      this.initDiffer();
     }
+  }
+
+  private trackByFn: TrackByFunction<T>;
+  /**
+   * The trackBy function to use for the array's elements.
+   * Only relevant if checkElements is set to New.
+   */
+  @Input()
+  public set trackBy(val: TrackByFunction<T>) {
+    this.trackByFn = val;
+
+    // update differ
+    if (this.differ) {
+      this.initDiffer();
+    }
+  }
+
+  private initDiffer() {
+    this.differ = this.differs
+      .find(this.manager.current)
+      .create(this.trackByFn);
   }
 
   /**
