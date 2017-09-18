@@ -20,7 +20,9 @@ describe('The directives used for a form with text inputs', () => {
       .map(async (_, i) => await $('input:last-child').sendKeys(i, Key.TAB));
 
     JSON.parse(await $('#customers').getText()).should.eql(
-      Array(4).fill(0).map((_, i) => ({ id: '' + i })),
+      Array(4)
+        .fill(0)
+        .map((_, i) => ({ id: '' + i })),
     );
   });
 

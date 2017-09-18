@@ -23,8 +23,9 @@ describe('A complete replacement of the array', () => {
   it('preserves focus on the first element', async () => {
     (await $$('input[name="name"]'))[0].click();
 
-    (await browser.switchTo().activeElement().getAttribute('value')).should.eql(
-      'p1',
-    );
+    (await browser
+      .switchTo()
+      .activeElement()
+      .getAttribute('value')).should.eql('p1');
   });
 });
