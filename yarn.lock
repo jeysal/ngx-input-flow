@@ -3,58 +3,58 @@
 
 
 "@angular/common@^4.2.3":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-4.4.1.tgz#d1aea2ccebddd2dfaf7137f55760d45638ada24a"
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-4.4.2.tgz#728084f538106ffc82d11895a190fd81cfe44881"
   dependencies:
     tslib "^1.7.1"
 
 "@angular/compiler-cli@^4.2.3":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-4.4.1.tgz#17b3be903efe1ed3bb2b1e29140634b500fdb265"
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-4.4.2.tgz#9af605e60a204916d9abf42138a672af38c30d60"
   dependencies:
-    "@angular/tsc-wrapped" "4.3.6"
+    "@angular/tsc-wrapped" "4.4.2"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
 
 "@angular/compiler@^4.2.3":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-4.4.1.tgz#ece6a333f8e57e819679f2a4034f807564b9cc40"
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-4.4.2.tgz#028790f6c5a29fe5f5fb7d352eadbce1befe499b"
   dependencies:
     tslib "^1.7.1"
 
 "@angular/core@^4.2.3":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-4.4.1.tgz#a3c5b80452448535253d2eab17b60601d83cc012"
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-4.4.2.tgz#7bb50379c4f836d3c859fe92d6dfe92306ab1500"
   dependencies:
     tslib "^1.7.1"
 
 "@angular/forms@^4.2.3":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-4.4.1.tgz#2a3644a3f84b96aad240ac6caa74d52bf3ada24a"
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-4.4.2.tgz#6763ab09a515760749caca67e898d2456052cb1e"
   dependencies:
     tslib "^1.7.1"
 
 "@angular/platform-browser-dynamic@^4.2.3":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-4.4.1.tgz#951dd7fdb3f5a0e45bc4bf93a2a7e051def24eaf"
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-4.4.2.tgz#c199dc0a9e0ff20c5ae81c9048888ed2674e2128"
   dependencies:
     tslib "^1.7.1"
 
 "@angular/platform-browser@^4.2.3":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-4.4.1.tgz#ce576401976f71d45a23c9a61ac05cef90a70f00"
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-4.4.2.tgz#fadf51894db804e3a21b6978ff61838c1e4c193a"
   dependencies:
     tslib "^1.7.1"
 
 "@angular/router@^4.2.3":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-4.4.1.tgz#d2c933c84a8f5077792e77787561ee1e7a4a1a14"
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-4.4.2.tgz#6420bb7b9e18555317c7c1d134e044034f62c9ea"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/tsc-wrapped@4.3.6":
-  version "4.3.6"
-  resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-4.3.6.tgz#1aa66e0ab2c4799a4ad14b675e13953aa5fcd436"
+"@angular/tsc-wrapped@4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-4.4.2.tgz#8c28ff0d19b32b9b281b4cb434d25876fc1acd60"
   dependencies:
     tsickle "^0.21.0"
 
@@ -888,6 +888,15 @@ combine-lists@^1.0.0:
   dependencies:
     lodash "^4.5.0"
 
+combine-source-map@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/combine-source-map/-/combine-source-map-0.8.0.tgz#a58d0df042c186fcf822a8e8015f5450d2d79a8b"
+  dependencies:
+    convert-source-map "~1.1.0"
+    inline-source-map "~0.6.0"
+    lodash.memoize "~3.0.3"
+    source-map "~0.5.3"
+
 combined-stream@^1.0.5, combined-stream@~1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.5.tgz#938370a57b4a51dea2c77c15d5c5fdf895164009"
@@ -976,6 +985,14 @@ content-disposition@0.5.2:
 content-type@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.2.tgz#b7d113aee7a8dd27bd21133c4dc2529df1721eed"
+
+convert-source-map@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.0.tgz#9acd70851c6d5dfdd93d9282e5edf94a03ff46b5"
+
+convert-source-map@~1.1.0:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.1.3.tgz#4829c877e9fe49b3161f3bf3673888e204699860"
 
 cookie-signature@1.0.6:
   version "1.0.6"
@@ -2286,6 +2303,12 @@ ini@^1.3.4, ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
+inline-source-map@~0.6.0:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/inline-source-map/-/inline-source-map-0.6.2.tgz#f9393471c18a79d1724f863fa38b586370ade2a5"
+  dependencies:
+    source-map "~0.5.3"
+
 internal-ip@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/internal-ip/-/internal-ip-2.0.3.tgz#ed3cf9b671ac7ff23037bfacad42eb439cd9546c"
@@ -2585,7 +2608,7 @@ json-stable-stringify@^1.0.1:
   dependencies:
     jsonify "~0.0.0"
 
-json-stringify-safe@~5.0.1:
+json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 
@@ -2659,8 +2682,8 @@ karma-mocha@^1.3.0:
     minimist "1.2.0"
 
 karma-typescript@^3.0.4:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/karma-typescript/-/karma-typescript-3.0.5.tgz#f49fadf3765753be543fe46692e8050145519a9f"
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/karma-typescript/-/karma-typescript-3.0.6.tgz#b1c88393a12ce83bf8235f3b12911d7470f906b1"
   dependencies:
     acorn "^4.0.4"
     amdefine "1.0.0"
@@ -2670,8 +2693,10 @@ karma-typescript@^3.0.4:
     browser-resolve "^1.11.0"
     browserify-zlib "^0.2.0"
     buffer "^5.0.6"
+    combine-source-map "^0.8.0"
     console-browserify "^1.1.0"
     constants-browserify "^1.0.0"
+    convert-source-map "^1.5.0"
     crypto-browserify "^3.11.1"
     diff "^3.2.0"
     domain-browser "^1.1.7"
@@ -2683,6 +2708,7 @@ karma-typescript@^3.0.4:
     ieee754 "^1.1.8"
     isarray "^1.0.0"
     istanbul "0.4.5"
+    json-stringify-safe "^5.0.1"
     karma-coverage "^1.1.1"
     lodash "^4.17.4"
     log4js "^1.1.1"
@@ -2896,6 +2922,10 @@ lodash.keys@^3.0.0:
     lodash._getnative "^3.0.0"
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
+
+lodash.memoize@~3.0.3:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-3.0.4.tgz#2dcbd2c287cbc0a55cc42328bd0c736150d53e3f"
 
 lodash.restparam@^3.0.0:
   version "3.6.1"
