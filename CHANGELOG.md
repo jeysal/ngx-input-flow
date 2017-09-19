@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/jeysal/ngx-input-flow/compare/1.0.0...1.1.0) (2017-09-19)
+
+
+### Features
+
+* add trackBy input to ngxInputFlow ([c0fa5bc](https://github.com/jeysal/ngx-input-flow/commit/c0fa5bc)), closes [#4](https://github.com/jeysal/ngx-input-flow/issues/4)
+* allow usage of ngxInputFlowModel without an input binding ([46cedd3](https://github.com/jeysal/ngx-input-flow/commit/46cedd3)), closes [#3](https://github.com/jeysal/ngx-input-flow/issues/3)
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/jeysal/ngx-input-flow/compare/0.1.0...1.0.0) (2017-08-14)
 
