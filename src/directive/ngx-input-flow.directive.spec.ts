@@ -74,6 +74,21 @@ describe('The InputFlowDirective', () => {
     });
   });
 
+  describe('[trackBy] input', () => {
+    it('queries for a new differ', () => {
+      inputFlow.ngxInputFlow = [];
+      inputFlow.trackBy = () => 0;
+
+      find.should.have.been.calledTwice;
+    });
+
+    it('does not initially query for a differ', () => {
+      inputFlow.trackBy = () => 0;
+
+      find.should.not.have.been.called;
+    });
+  });
+
   describe('.flow() function', () => {
     it('delegates to the manager flow', () => {
       const flow: object[] = [];

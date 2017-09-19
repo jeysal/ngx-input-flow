@@ -72,6 +72,16 @@ describe('The checkElements setting', () => {
       (await displayedPersons()).should.eql([persons[2], emptyPerson]);
     });
 
+    it('should still render an item that has been replaced with an empty item, but has the same tracking identity', async () => {
+      await $('#replace-first-empty-retaining-id').click();
+
+      (await displayedPersons()).should.eql([
+        emptyPerson,
+        persons[2],
+        emptyPerson,
+      ]);
+    });
+
     it('should not render an empty item that has been prepended', async () => {
       await $('#prepend-empty').click();
 
