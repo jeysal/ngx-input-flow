@@ -66,11 +66,12 @@ You can find some more examples in the `e2e` folder that is used for end-to-end 
 
 #### ngxInputFlow options
 
-| Input           | Type                                          | Default                                         |
-| --------------- | --------------------------------------------- | ----------------------------------------------- |
-|`checkElements`  | <code>'None' &#124; 'New' &#124; 'All'</code> |`'None'`                                         |
-|`emptyWhen`      |`any => boolean`                               |`item => Object.values(item).every(val => !val);`|
-|`emptyItem`      |`() => any`                                    |`() => ({})`                                     |
+| Input           | Type                                                          | Default                                         |
+| --------------- | ------------------------------------------------------------- | ----------------------------------------------- |
+|`checkElements`  | <code>'None' &#124; 'New' &#124; 'All'</code>                 |`'None'`                                         |
+|`trackBy`        | [TrackByFunction](https://angular.io/api/core/TrackByFunction)|`undefined`                                      |
+|`emptyWhen`      |`any => boolean`                                               |`item => Object.values(item).every(val => !val);`|
+|`emptyItem`      |`() => any`                                                    |`() => ({})`                                     |
 
 **checkElements** determines which elements of the array will be checked for emptiness during every change detection cycle.
 Discovered empty elements will be removed automatically.
@@ -81,6 +82,10 @@ It is recommended you ensure that no empty elements are inserted into the array 
 to avoid annoying the user with intermediate empty elements.  
 `'New'` checks only elements that have been added since the last change detection cycle.  
 `'All'` checks the complete array every time. This is the least performant option.
+
+**trackBy** should be used if you set `checkElements` to `'New'` and your `ngFor` has a `trackBy` function as well.
+By passing the same function that `ngFor` also gets, you make sure that ngx-input-flow checks elements for emptiness in the same way
+`ngFor` checks them to determine which elements need to be updated.
 
 **emptyWhen** is a function that determines whether an elements is considered empty.
 It takes the element as its only parameter. It returns `true` if the element is empty and `false` if it is not.
