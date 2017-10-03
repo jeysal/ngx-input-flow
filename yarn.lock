@@ -98,9 +98,9 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
-"@types/karma@^0.13.35":
-  version "0.13.36"
-  resolved "https://registry.yarnpkg.com/@types/karma/-/karma-0.13.36.tgz#b7c6aee79c8c9f722bb4e887719e0362b809e4a0"
+"@types/karma@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@types/karma/-/karma-1.7.0.tgz#b36b2023e364adad0aa5b872bbb9cab71cbe29fc"
   dependencies:
     "@types/bluebird" "*"
     "@types/log4js" "*"
