@@ -7,7 +7,7 @@ import { emptyPerson, persons } from '../data/persons';
 chai.should();
 
 describe('The directives used without a ngxInputFlowModel binding', () => {
-  beforeEach(async () => await browser.get('/no-model-binding'));
+  beforeEach(async () => browser.get('/no-model-binding'));
 
   it('render given array with an additional flow item', async () => {
     (await displayedPersons()).should.eql([...persons, emptyPerson]);

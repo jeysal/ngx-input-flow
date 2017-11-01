@@ -7,7 +7,7 @@ import { emptyPerson } from '../data/persons';
 chai.should();
 
 describe('A complete replacement of the array', () => {
-  beforeEach(async () => await browser.get('/replacement'));
+  beforeEach(async () => browser.get('/replacement'));
 
   it('results in the new array being displayed', async () => {
     (await $$('input[name="name"]'))[0].click();

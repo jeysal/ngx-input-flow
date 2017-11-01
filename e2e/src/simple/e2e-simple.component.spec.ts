@@ -14,7 +14,7 @@ testComponent('/outer', 'ngx-input-flow-e2e-inner');
 
 function testComponent(route: string, repeaterType: string) {
   describe('The directives used for a simple table on ' + route, () => {
-    beforeEach(async () => await browser.get(route));
+    beforeEach(async () => browser.get(route));
 
     it('render given array with an additional flow item', async () => {
       (await displayedPersons()).should.eql([...persons, emptyPerson]);

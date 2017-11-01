@@ -5,7 +5,7 @@ import { $, $$, browser, Key } from 'protractor';
 chai.should();
 
 describe('The directives used for a form with text inputs', () => {
-  beforeEach(async () => await browser.get('/form'));
+  beforeEach(async () => browser.get('/form'));
   it('should render one initial empty input', async () => {
     const inputValues = await $$('input').map((input: any) =>
       input.getAttribute('value'),
@@ -17,7 +17,7 @@ describe('The directives used for a form with text inputs', () => {
   it('should allow entering multiple items in a row', async () => {
     Array(4)
       .fill(0)
-      .map(async (_, i) => await $('input:last-child').sendKeys(i, Key.TAB));
+      .map(async (_, i) => $('input:last-child').sendKeys(i, Key.TAB));
 
     JSON.parse(await $('#customers').getText()).should.eql(
       Array(4)
@@ -29,7 +29,7 @@ describe('The directives used for a form with text inputs', () => {
   it('should allow removing intermediate items', async () => {
     Array(4)
       .fill(0)
-      .map(async (_, i) => await $('input:last-child').sendKeys(i, Key.TAB));
+      .map(async (_, i) => $('input:last-child').sendKeys(i, Key.TAB));
     await $('input:nth-child(3)').sendKeys(
       Key.CONTROL,
       'a',
