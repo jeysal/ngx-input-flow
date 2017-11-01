@@ -25,7 +25,7 @@
   "typings": "index.d.ts",
   "scripts": {
     "all": "run-s fix clean build e2e.update e2e",
-    "clean": "rimraf aot coverage dist tmp",
+    "clean": "rimraf coverage dist tmp",
     "prefix": "prettier --write --single-quote --trailing-comma all 'src/**/*.{ts,js}' 'e2e/src/**/*.{ts,js}' '*.{ts,js}'",
     "fix": "tslint --fix --project tsconfig.json 'src/**/*.ts' 'e2e/src/**/*.ts' '*.ts'",
     "prelint": "prettier -l --single-quote --trailing-comma all 'src/**/*.{ts,js}' 'e2e/src/**/*.{ts,js}' '*.{ts,js}'",

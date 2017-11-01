@@ -6,7 +6,6 @@
 node_modules/
 coverage/
 dist/
-aot/
 tmp/
 
 # error
