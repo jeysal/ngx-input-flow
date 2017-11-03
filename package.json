@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "ngx-input-flow",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Fast & smooth list input for Angular",
   "author": "Tim Seckinger",
   "license": "MIT",
