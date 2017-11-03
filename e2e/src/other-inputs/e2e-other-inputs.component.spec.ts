@@ -5,7 +5,7 @@ import { $, $$, browser } from 'protractor';
 chai.should();
 
 describe('The directives used with input type', () => {
-  beforeEach(async () => await browser.get('/other-inputs'));
+  beforeEach(async () => browser.get('/other-inputs'));
 
   describe('select', () => {
     it('allow entering multiple items in a row', async () => {

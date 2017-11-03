@@ -5,7 +5,7 @@ import { $, $$, browser, Key } from 'protractor';
 chai.should();
 
 describe('The custom emptiness config', () => {
-  beforeEach(async () => await browser.get('/custom-empty'));
+  beforeEach(async () => browser.get('/custom-empty'));
 
   it('is used to generate a fresh item every time', async () => {
     await (await $$('input[name="product"]'))[1].sendKeys('456');

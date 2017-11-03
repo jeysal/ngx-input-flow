@@ -5,7 +5,7 @@ import { $, $$, browser, Key } from 'protractor';
 chai.should();
 
 describe('Nested ngxInputFlow', () => {
-  beforeEach(async () => await browser.get('/nested'));
+  beforeEach(async () => browser.get('/nested'));
 
   it('renders an initial empty item for both the inner and the outer array', async () => {
     (await $$('.name').count()).should.equal(1);

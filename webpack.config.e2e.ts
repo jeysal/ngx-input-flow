@@ -5,7 +5,7 @@ const path = require('path');
 const resolvePath = path.resolve.bind(path, __dirname);
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { AotPlugin } = require('@ngtools/webpack');
+const { AngularCompilerPlugin } = require('@ngtools/webpack');
 
 const config: webpack.Configuration = {
   context: resolvePath(),
@@ -21,7 +21,7 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       template: resolvePath('e2e/src/index.html'),
     }),
-    new AotPlugin({
+    new AngularCompilerPlugin({
       tsConfigPath: resolvePath('tsconfig.json'),
       mainPath: resolvePath('e2e/src/e2e-main.ts'),
     }),
@@ -34,7 +34,7 @@ const config: webpack.Configuration = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
         loader: '@ngtools/webpack',
       },
     ],

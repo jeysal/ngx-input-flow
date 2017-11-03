@@ -8,7 +8,7 @@ chai.should();
 
 describe('The checkElements setting', () => {
   describe('"None"', () => {
-    beforeEach(async () => await browser.get('/check-no-elements'));
+    beforeEach(async () => browser.get('/check-no-elements'));
 
     it('should render the empty item included in the array', async () => {
       (await displayedPersons()).should.eql([...persons, emptyPerson]);
@@ -46,7 +46,7 @@ describe('The checkElements setting', () => {
   });
 
   describe('"New"', () => {
-    beforeEach(async () => await browser.get('/check-new-elements'));
+    beforeEach(async () => browser.get('/check-new-elements'));
 
     it('should not render the empty item included in the array', async () => {
       (await displayedPersons()).should.eql([
@@ -94,7 +94,7 @@ describe('The checkElements setting', () => {
   });
 
   describe('"All"', () => {
-    beforeEach(async () => await browser.get('/check-all-elements'));
+    beforeEach(async () => browser.get('/check-all-elements'));
 
     it('should not render the empty item included in the array', async () => {
       (await displayedPersons()).should.eql([
