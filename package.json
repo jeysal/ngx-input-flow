@@ -69,7 +69,7 @@
     "@types/chai-as-promised": "^7.1.0",
     "@types/karma": "^1.7.0",
     "@types/mocha": "^2.2.40",
-    "@types/sinon": "^2.2.2",
+    "@types/sinon": "^4.0.0",
     "@types/sinon-chai": "^2.7.27",
     "@types/webpack": "^3.0.3",
     "@types/webpack-dev-server": "^2.4.0",
