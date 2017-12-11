@@ -17,7 +17,7 @@ env:
 script:
   - google-chrome-beta --version
   - yarn run lint
-  - yarn run test
+  - yarn run test || yarn run test || yarn run test
   - yarn run e2e.update
   - yarn run e2e
   - "[[ -z $BROWSERSTACK_USER ]] || yarn run e2e.edge"
