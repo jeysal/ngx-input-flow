@@ -2,15 +2,17 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { merge as mergeObservables } from 'rxjs/observable/merge';
 import { timer } from 'rxjs/observable/timer';
-import { debounce } from 'rxjs/operators/debounce';
-import { distinct } from 'rxjs/operators/distinct';
-import { map } from 'rxjs/operators/map';
-import { mapTo } from 'rxjs/operators/mapTo';
-import { merge } from 'rxjs/operators/merge';
-import { mergeMap } from 'rxjs/operators/mergeMap';
-import { toArray } from 'rxjs/operators/toArray';
-import { window } from 'rxjs/operators/window';
-import { withLatestFrom } from 'rxjs/operators/withLatestFrom';
+import {
+  debounce,
+  distinct,
+  map,
+  mapTo,
+  merge,
+  mergeMap,
+  toArray,
+  window,
+  withLatestFrom,
+} from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
 import { ArrayManager } from '../service/array-manager';
 
