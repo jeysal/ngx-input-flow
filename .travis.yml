@@ -15,6 +15,7 @@ env:
   - CHROME_BINARY=/usr/bin/google-chrome-beta
 
 script:
+  - google-chrome-beta --version
   - yarn run lint
   - yarn run test
   - yarn run e2e.update
