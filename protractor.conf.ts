@@ -8,6 +8,7 @@ const config: Config = {
   capabilities: {
     browserName: 'chrome',
     chromeOptions: {
+      binary: process.env.CHROME_BINARY || '/usr/bin/google-chrome-stable',
       args: ['--headless', '--disable-gpu', '--window-size=800,600'],
     },
     shardTestFiles: true,
