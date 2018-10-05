@@ -44,7 +44,7 @@ export class InputFlowDirective<T> implements DoCheck {
     }
   }
 
-  private trackByFn: TrackByFunction<T>;
+  private trackByFn?: TrackByFunction<T>;
   /**
    * The trackBy function to use for the array's elements.
    * Only relevant if checkElements is set to New.
@@ -72,7 +72,8 @@ export class InputFlowDirective<T> implements DoCheck {
    * This two-way binding modifies the input to pass it back as an output, resulting in a changed input value again.
    * However, the condensing is idempotent in that it does not emit anything on the second invocation, hence no infinite loop results.
    */
-  @Output() public ngxInputFlowChange = new EventEmitter<Iterable<T>>(true);
+  @Output()
+  public ngxInputFlowChange = new EventEmitter<Iterable<T>>(true);
 
   /**
    * The modified input iterable, condensed to have no empty elements, then complemented with a single new empty element.
@@ -108,7 +109,7 @@ export class InputFlowDirective<T> implements DoCheck {
    * Initialized when a diffable {@link Iterable} is assigned to {@link #ngxInputFlow}.
    * Before that happens, all input will be ignored.
    */
-  private differ: IterableDiffer<T>;
+  private differ?: IterableDiffer<T>;
 
   /**
    * Performs additional checks if enabled by {@link #checkElements}

@@ -6,12 +6,9 @@ export default {
     format: 'umd',
     sourcemap: true,
     globals: {
-      '@angular/core': 'ng.core',
-      'rxjs/Observable': 'Rx',
-      'rxjs/Subject': 'Rx',
-      'rxjs/observable/merge': 'Rx.Observable',
-      'rxjs/observable/timer': 'Rx.Observable',
+      rxjs: 'Rx',
       'rxjs/operators': 'Rx.operators',
+      '@angular/core': 'ng.core',
     },
   },
 };

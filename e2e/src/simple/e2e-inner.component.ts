@@ -14,5 +14,6 @@ import { Component, Input } from '@angular/core';
     `,
 })
 export class E2eInnerComponent {
-  @Input() person: any;
+  @Input()
+  person: any;
 }
