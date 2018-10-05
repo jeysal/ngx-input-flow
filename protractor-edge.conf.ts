@@ -2,8 +2,9 @@ import { Config } from 'protractor';
 
 const config: Config = require('./protractor.conf.js').config; // tslint:disable-line:no-var-requires no-require-imports
 
-config.seleniumAddress = `http://${process.env.BROWSERSTACK_USER}:${process.env
-  .BROWSERSTACK_KEY}@hub-cloud.browserstack.com/wd/hub`;
+config.seleniumAddress = `http://${process.env.BROWSERSTACK_USER}:${
+  process.env.BROWSERSTACK_KEY
+}@hub-cloud.browserstack.com/wd/hub`;
 config.capabilities = {
   'browserstack.localIdentifier': process.env.BROWSERSTACK_LOCAL_IDENTIFIER,
   'browserstack.local': true,

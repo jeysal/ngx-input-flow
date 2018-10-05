@@ -8,6 +8,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
 
 const config: webpack.Configuration = {
+  mode: 'development',
+
   context: resolvePath(),
 
   entry: resolvePath('e2e/src/e2e-main.ts'),

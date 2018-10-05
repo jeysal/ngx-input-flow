@@ -6,12 +6,14 @@ import { FocusTracker } from '../service/focus-tracker';
   selector: '[ngxInputFlowModel]',
 })
 export class InputFlowModelDirective<T> {
-  @Input('ngxInputFlowModel') public ngxInputFlowModel: T;
+  @Input()
+  public ngxInputFlowModel?: T;
 
   /**
    * Specifies the delay after the last focus event before the array is checked for elements left empty.
    */
-  @Input('focusDebounce') public focusDebounce: number = 500;
+  @Input()
+  public focusDebounce: number = 500;
 
   constructor(
     private tracker: FocusTracker<T>,
